@@ -1,17 +1,14 @@
-import { Component } from "react";
 import css from './Section.module.css'
 import PropTypes from 'prop-types';
 
-export class Section extends Component  {
+export const Section = ({title, children}) =>  {
 
-    render() {
-        return (
-            <div className={css.section}>
-                <h2>{this.props.title}</h2>
-                {this.props.children}
-            </div>
-        )
-    }
+    return (
+        <div className={css.section}>
+            <h2>{title}</h2>
+            {children}
+        </div>
+    )
 }
 
 Section.propTypes = {
